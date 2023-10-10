@@ -1,0 +1,238 @@
+/**
+* You can edit this whole file.
+*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --gray-0: #000000;
+  --gray-1: #222222;
+  --gray-2: #dddddd;
+  --gray-3: #fbfbfb;
+  --gray-4: #ffffff;
+  --primary: #8a2be2;
+  --secondary: #20d397;
+  --font-size-1: 1.5rem;
+  --font-size-2: 1.25rem;
+  --font-size-3: 1rem;
+  --font-weight-thin: 300;
+  --font-weight-bold: 600;
+  --font-weight-heavy: 800;
+  --spacer-1: .25rem;
+  --spacer-2: .5rem;
+  --spacer-3: 1rem;
+  --spacer-4: 1.5rem;
+  --spacer-5: 2rem;
+  --shadows: 7px 7px 7px rgba(0, 0, 0, .15);
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.44;
+}
+
+.container {
+  width: 100%;
+  padding-right: 230px;
+  padding-left: 230px;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--secondary);
+
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon span {
+  font-weight: bold;
+  color: white;
+}
+
+.icon img {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+}
+
+.navlinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.navlinks ul {
+  list-style: none;
+  display: flex;
+  display: flex;
+  gap: 15px;
+}
+
+.navlinks ul li a {
+  font-weight: 640;
+  color: white;
+  list-style-type: none;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* HEADER */
+
+/* TITULO */
+
+.titulo {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+/* TITULO */
+
+.titulo h2 {
+  font-weight: 600;
+}
+
+/* Estilos del contenedor principal */
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+  position: relative;
+  height: 100%;
+}
+
+.main .card {
+  border: 1px solid var(--gray-2);
+  box-shadow: var(--shadows);
+  padding: 15px;
+  min-height: 350px;
+  max-height: 460px;
+  overflow: hidden;
+}
+
+.main .card h2 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.main .card p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.main .card a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Estilos para los botones */
+.btn {
+  background-color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  width: 280px;
+  height: 30px;
+  color: white;
+  text-decoration: none;
+  width: 100%;
+}
+
+.text {
+  height: 88%;
+}
+
+.btn img {
+  width: 15px;
+  margin-right: 4px;
+}
+
+.navlinks ul li.active a {
+  border-bottom: 3px solid white;
+  display: block;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+  .main .card {
+    max-width: none;
+    overflow: auto;
+    padding: 15px;
+    width: 250px;
+
+  }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+    padding-right: 50px;
+    padding-left: 50px;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+
+  }
+  .main .card {
+    max-width: none;
+    overflow: hidden;
+    width: 230px;
+    min-height: 450px;
+    max-height: 460px;
+    
+  }
+
+  .main .card p {
+    font-size: 14px;
+
+  }
+  
+}
+
+@media screen and (max-width: 767px) {
+
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+    padding-right: 100px;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container .card h2 {
+    font-size: 18px;
+  }
+
+  .main .card {
+    padding: 15px;
+    overflow: hidden;
+    width: 300px;
+  }
+
+
+}
